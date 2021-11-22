@@ -41,9 +41,7 @@ export default function loginIn(state = initialState, action) {
     case types.LOGIN_OUT_DONE:
       return {
         ...state,
-        status: '退出成功',
-        isSuccess: true,
-        user: action.user,
+        ...initialState,
       };
     case types.LOGIN_OUT_ERROR:
       return {

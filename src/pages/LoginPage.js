@@ -9,12 +9,6 @@ import {
 
 import {connect} from 'react-redux'; // 引入connect函数
 import * as loginAction from '../actions/loginAction'; // 导入action方法
-import {NavigationActions} from '@react-navigation/native';
-import MainPage from './MainPage';
-// const resetAction = NavigationActions.reset({
-//   index: 0,
-//   actions: [NavigationActions.navigate({routeName: 'Main'})],
-// });
 
 class LoginPage extends Component {
   static navigationOptions = {

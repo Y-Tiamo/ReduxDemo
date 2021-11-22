@@ -18,15 +18,11 @@ class MainPage extends Component {
   }
 
   render() {
-    const {user} = this.props.navigation;
-    const {count, incrementFn, decrementFn, loginOutFn} = this.props;
+    const {user} = this.props;
     return (
       <View style={styles.container}>
-        <Counter
-          incrementFn={incrementFn}
-          decrementFn={decrementFn}
-          counter={count}
-        />
+        <Text>登录信息</Text>
+        <Text>{JSON.stringify(user)}</Text>
         <TouchableOpacity
           onPress={this.logout.bind(this)}
           style={{marginTop: 50}}>
@@ -52,6 +48,7 @@ const styles = StyleSheet.create({
 export default connect(
   state => ({
     count: state.counter.count,
+    user: state.loginIn.user,
   }),
   dispatch => ({
     incrementFn: () => dispatch(counterAction.increment()),

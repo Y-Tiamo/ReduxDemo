@@ -9,7 +9,7 @@ export function login() {
     dispatch(isLogining());
     // 模拟用户登录
     return fetch(
-      'https://restapi.amap.com/v3/direction/walking?origin=116.434307,39.90909&destination=116.434446,39.90816&key=<用户的key>',
+      'https://restapi.amap.com/v3/direction/walking?origin=116.434307,39.90909&destination=116.434446,39.90816&key=709f28af0228107ae16c74c7fe0e07da',
     )
       .then(response => response.json())
       .then(json => dispatch(loginSuccess(true, json)))
@@ -46,7 +46,7 @@ export function loginOut() {
     dispatch(isQuitting());
     // 模拟用户登录
     return fetch(
-      'https://restapi.amap.com/v3/direction/walking?origin=116.434307,39.90909&destination=116.434446,39.90816&key=<用户的key>',
+      'https://restapi.amap.com/v3/direction/walking?origin=116.434307,39.90909&destination=116.434446,39.90816&key=709f28af0228107ae16c74c7fe0e07da',
     )
       .then(response => response.json())
       .then(json => dispatch(loginOutSuccess(true, json)))
